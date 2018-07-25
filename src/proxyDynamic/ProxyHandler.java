@@ -3,11 +3,11 @@ package proxyDynamic;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-public class ProxyHandler implements InvocationHandler {
+public class ProxyHandler<T> implements InvocationHandler {
 
-	private RealSubject subject;
+	private T subject;
 
-	public ProxyHandler(RealSubject subject) {
+	public ProxyHandler(T subject) {
 		super();
 		this.subject = subject;
 	}
